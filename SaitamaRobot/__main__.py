@@ -51,12 +51,9 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
-I am a smol but smart Group Management Bot, add me to your group and make it 👑
+Hi {}, my name is {}! 👑
 You can find my list of available commands with /help.
-
-and some specially made command for fun by billy
-
+credit to @wancoins
 """
 
 HELP_STRINGS = """
@@ -78,7 +75,7 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-BILLYGUARDIAN_IMG = "https://telegra.ph/file/4208b97535d77936d8e7f.jpg"
+BILLYGUARDIAN_IMG = "https://telegra.ph/file/e2f333d23d84383d601dd.jpg"
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -196,17 +193,17 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="☑️ Add BillyGuardian to your group",
+                            text="☑️ Add Doragon Bot to your group",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
                      [
                          InlineKeyboardButton(
                              text="🚑 Support Channel",
-                             url=f"https://t.me/billyguardian"),
+                             url=f"https://t.me/doragonland"),
                          InlineKeyboardButton(
                              text="Support Chat 🚑",
-                             url="https://t.me/billyguardian")
+                             url="https://t.me/doragonland")
                      ],
                      [
                          InlineKeyboardButton(
