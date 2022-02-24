@@ -1,0 +1,33 @@
+import asyncio
+
+@app.on_message(filters.command('sample'))
+async def shitty_handler(client, message):
+    msg = await client.send_message(chat_id=message.chat.id, text="Initial message")
+    text_list = ("Estarossa vs Escanor - Emoji Animation",
+                "🟡\n☝️",
+                "🖐🏻\nEstarossa:..",
+                "🖐🏻◾️◼️\nEstarossa: .....",
+                "🖐🏻◾️◼️⬛️\nEstarossa: ...BLACKOUT",
+                "🟡\n☝️\nEscanor: hm?",
+                "⚫️\n☝️\n*Escanor's sun becomes dark*",
+                "🖐🏻⬛️\nEstarossa: My darkness swallowed your sun",
+                "⚫️\n☝️\nEscanor: You say my attacks are ineffective?",
+                "⚫️\n☝️\nEscanor: Who decided that?",
+                "((⚫️))\n  ☝️\nEscanor:",
+                "((🌕))\n  ☝️\nEscanor: *closes eyes*",
+                "🟡\n☝️\nEscanor: You said you swallowed my sun?",
+                "🌕\n☝️\nEscanor: Who decided that?",
+                "🌕\n☝️\nEscanor:",
+                "🌕\n☝️\nEscanor: Cruel sun!",
+                "☀️\n☝️\nEscanor: I'm.... the one who decides those things!",
+                "☀️\n☝️\nEscanor: BEGONE!!!!",)
+                          
+    for text in text_list:
+      await msg.edit_text(text)
+      await asyncio.sleep(0.5)
+
+dispatcher.add_handler(SHITTY_HANDLER)
+
+__handlers__ = [
+    SHITTY_HANDLER,
+    ]

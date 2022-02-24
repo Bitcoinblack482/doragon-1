@@ -1,0 +1,23 @@
+import logging
+from telegram import InlineQueryResultArticle, InputTextMessageContent
+from telegram.ext import CommandHandler, InlineQueryHandler, ConversationHandler
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, ParseMode
+from telegram.ext import Updater, CallbackQueryHandler, CallbackContext
+import random
+
+dispatcher = updater.dispatcher
+
+def say(update, context):
+  msg = update.message.text
+  #msg = msg.split()[-1]
+  update.message.reply_text("".join(msg[4:]))
+  #if msg == "ok":
+   # update.message.reply_text(f'{update.effective_user.name} say ok')
+  #elif msg == "no":
+   # update.message.reply_text(f'{update.effective_user.name} say No')
+  #else:
+   # update.message.reply_text("no command found")
+   
+   say_handler = CommandHandler("say", say)
+   dispatcher.add_handler(say_handler)
+   updater.start_polling()
